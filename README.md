@@ -65,7 +65,7 @@ The folder verapdf contains the executable verapdf.jar. This is a simple command
 
 ### Using the service
 
-You can access the service via the optional frontend application, or directly via the REST api.
+You can access the service via the optional [web application](https://github.com/FabianHamm/validation-service-web-app), or directly via the [REST API](https://documenter.getpostman.com/view/4682945/S1TSaKdB?version=latest).
 
 
 #### Predefined Users
