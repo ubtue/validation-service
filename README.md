@@ -1,5 +1,5 @@
 # validation-service
-Restful validation service for PDF and PDF/A. The service uses veraPDF and FITS for format identification and validation.
+RESTful web service for validation of PDF and PDF/A documents. The service uses veraPDF and FITS for format identification and validation.
 
 
 ## Requirements
@@ -61,7 +61,7 @@ HOME_DIRECTORY
 ```
 The folder fits contains the default FITS application with fits.sh at the root level.
 
-The folder verapdf contains verapdf.jar. This is a simple command line wrapper for the batch api and the source code for building it can be found here (Link).
+The folder verapdf contains the executable verapdf.jar. This is a simple command line wrapper for the batch api and the source code for building it can be found [here](https://github.com/FabianHamm/verapdf-wrp-exec). VeraPDF was integrated into the service like this because it was originally not threadsafe. This however [has changed](https://github.com/veraPDF/veraPDF-library/issues/1037) in the meantime...
 
 ### Using the service
 
