@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/j2ee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <env-entry>
+  	<!-- Directory where file uploads and temp files will be stored until validation -->
+	<env-entry-name>baseDirectory</env-entry-name> 
+	<env-entry-type>java.lang.String</env-entry-type> 
+	<env-entry-value>${directory.temp}</env-entry-value>
+  </env-entry>
+  
+  <env-entry>
+  	<!-- JWT Expiration in Minutes After Issued -->
+	<env-entry-name>jwtExpirationMinutes</env-entry-name> 
+	<env-entry-type>java.lang.Integer</env-entry-type> 
+	<env-entry-value>${jwt.expiration.minutes}</env-entry-value>
+  </env-entry>
+  
+  <env-entry>
+  	<!-- JWT Key for signing tokens -->
+	<env-entry-name>jwtSignatureKey</env-entry-name> 
+	<env-entry-type>java.lang.String</env-entry-type> 
+	<env-entry-value>${jwt.signature.key}</env-entry-value>
+  </env-entry>
+  
+  <env-entry>
+  	<!-- Path to fits shell script -->
+	<env-entry-name>fitsExecutablePath</env-entry-name> 
+	<env-entry-type>java.lang.String</env-entry-type> 
+	<env-entry-value>${directory.home}/fits/fits.sh</env-entry-value>
+  </env-entry>
+  <env-entry>
+  	<!-- Path to verapdf jar -->
+	<env-entry-name>verapdfExecutablePath</env-entry-name> 
+	<env-entry-type>java.lang.String</env-entry-type> 
+	<env-entry-value>${directory.home}/verapdf/verapdf.jar</env-entry-value>
+  </env-entry>
+  
+
+  <data-source>
+     <name>java:global/DspaceValidatorDS</name>
+     <class-name>org.apache.derby.jdbc.ClientDataSource</class-name>
+     <server-name>${db.server.name}</server-name>
+     <port-number>${db.port}</port-number>
+     <database-name>${db.name}</database-name>
+     <user>${db.user}</user>
+     <password>${db.pwd}</password>
+	 <max-idle-time>6000</max-idle-time>
+	 <login-timeout>6000</login-timeout>
+	 <property>
+	   	<name>connectionAttributes</name>
+	   	<value>;create=true</value>
+	 </property>
+   </data-source>
+  	
+</web-app>
