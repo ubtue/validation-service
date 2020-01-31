@@ -4,7 +4,7 @@ RESTful web service for validation of PDF and PDF/A documents. The service uses 
 
 ## Requirements
 - Jakarta EE Application Server (e.g. Payara Micro)
-- Java 8 RE
+- Java 8 RE / JavaDB
 - Tools veraPDF and FITS (details shown below)
 
 Windows is not supported yet...
