@@ -1,3 +1,5 @@
+Deprecated project!
+
 # validation-service
 RESTful web service for validation of PDF and PDF/A documents. The service uses veraPDF and FITS for format identification and validation.
 
